@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrer votre nom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue !</h1>
+        <p>Entrez votre nom pour commencer :</p>
+        <input type="text" id="nameInput" placeholder="Votre nom">
+        <button onclick="saveName()">Suivant</button>
+    </div>
+
+    <script>
+        function saveName() {
+            const name = document.getElementById("nameInput").value;
+            if (name) {
+                localStorage.setItem("userName", name);  // Stocke le nom
+                window.location.href = "couleur.html";    // Passe à la page suivante
+            } else {
+                alert("Veuillez entrer un nom !");
+            }
+        }
+    </script>
+</body>
+</html>

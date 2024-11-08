@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voulez-vous m'épouser ?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="proposalText"></h1>
+        <div class="hearts">
+            ❤️ ❤️ ❤️ ❤️ ❤️
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const name = localStorage.getItem("userName");
+            const color = localStorage.getItem("siteColor");
+            document.body.style.backgroundColor = color;
+            document.getElementById("proposalText").innerText = `${name}, veux-tu m'épouser ? ❤️`;
+        });
+    </script>
+</body>
+</html>
